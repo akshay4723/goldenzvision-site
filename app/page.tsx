@@ -49,7 +49,7 @@ const nav = [
   { label: "About", href: "#about" },
   { label: "AI Focus", href: "#ai" },
   { label: "Services", href: "#services" },
-  { label: "Products", href: "#products" },
+  { label: "Products", href: "#our-products" },
   { label: "Leadership", href: "#leadership" },
   { label: "Mission", href: "#mission" },
   { label: "Contact", href: "#contact" },
@@ -71,7 +71,7 @@ const BRAND = {
 const COMPANY_LINKS = {
   linkedin: "https://www.linkedin.com/company/golden-z-vision",
   twitter: "https://twitter.com/your_company",
-  email: "gelodenzvisionin@gmail.com",
+  email: "goldenzvisionin@gmail.com",
   phone: "+91 8148262395",
   location: "Tamil Nadu, India",
 };
@@ -458,7 +458,7 @@ function ClientRequestDialogContent({
     "consultation" | "custom_service" | "buy_product"
   >(defaultType);
 
-  // optional fields (NOT required)
+  // Mandatory fields (NOT required)
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -531,7 +531,7 @@ function ClientRequestDialogContent({
       return;
     }
 
-    // optional but improves quality: if user chose custom_service or buy_product, ensure they picked one
+    // Mandatory but improves quality: if user chose custom_service or buy_product, ensure they picked one
     if (requestType === "custom_service" && !serviceCategory) {
       setErrMsg("Please select a service.");
       return;
@@ -722,11 +722,11 @@ function ClientRequestDialogContent({
         </div>
       ) : null}
 
-      {/* Optional planning fields */}
+      {/* Mandatory planning fields */}
       <div className="grid gap-3 sm:grid-cols-2">
         <div>
           <label className={labelClasses}>
-            Name <span className="text-white/40">(optional)</span>
+            Name <span className="text-white/40">(Mandatory)</span>
           </label>
           <Input
             className={cn("mt-2", inputClasses)}
@@ -737,7 +737,7 @@ function ClientRequestDialogContent({
         </div>
         <div>
           <label className={labelClasses}>
-            Email <span className="text-white/40">(optional)</span>
+            Email <span className="text-white/40">(Mandatory)</span>
           </label>
           <Input
             className={cn("mt-2", inputClasses)}
@@ -750,7 +750,7 @@ function ClientRequestDialogContent({
 
         <div>
           <label className={labelClasses}>
-            Phone <span className="text-white/40">(optional)</span>
+            Phone <span className="text-white/40">(Mandatory)</span>
           </label>
           <Input
             className={cn("mt-2", inputClasses)}
@@ -761,7 +761,7 @@ function ClientRequestDialogContent({
         </div>
         <div>
           <label className={labelClasses}>
-            Company <span className="text-white/40">(optional)</span>
+            Company <span className="text-white/40">(Mandatory)</span>
           </label>
           <Input
             className={cn("mt-2", inputClasses)}
@@ -775,7 +775,7 @@ function ClientRequestDialogContent({
       <div className="grid gap-3 sm:grid-cols-2">
         <div>
           <label className={labelClasses}>
-            Budget <span className="text-white/40">(optional)</span>
+            Budget <span className="text-white/40">(Mandatory)</span>
           </label>
           <select
             value={budgetRange}
@@ -796,7 +796,7 @@ function ClientRequestDialogContent({
 
         <div>
           <label className={labelClasses}>
-            Timeline <span className="text-white/40">(optional)</span>
+            Timeline <span className="text-white/40">(Mandatory)</span>
           </label>
           <select
             value={timeline}
@@ -818,7 +818,7 @@ function ClientRequestDialogContent({
 
       <div>
         <label className={cn("text-sm font-medium text-white/85")}>
-          Message <span className="text-white/40">(optional)</span>
+          Message <span className="text-white/40">(Mandatory)</span>
         </label>
         <Textarea
           className={cn("mt-2 min-h-[110px]", inputClasses)}
@@ -1045,7 +1045,7 @@ export default function GoldenZVisionWebsite() {
                 "transition duration-300 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-orange-500/25"
               )}
             >
-              Get Started
+              Let Start
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
@@ -1119,8 +1119,8 @@ export default function GoldenZVisionWebsite() {
                     "transition duration-300 hover:-translate-y-[1px] hover:bg-white/10 hover:border-white/15 hover:shadow-lg hover:shadow-orange-500/10"
                   )}
                 >
+                  <Sparkles className="w-5 h-5" />
                   Explore our AI Products
-                  <ExternalLink className="ml-2 h-5 w-5" />
                 </Button>
               </motion.div>
 
@@ -1159,10 +1159,10 @@ export default function GoldenZVisionWebsite() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white">
-                        Enterprise AI Blueprint
+                        AI Solutions We Deliver 
                       </div>
                       <div className="text-xs text-white/60">
-                        A secure path from idea → production
+                        Secure, Intelligent, Scalable AI Solutions
                       </div>
                     </div>
                   </div>
@@ -1179,23 +1179,23 @@ export default function GoldenZVisionWebsite() {
                   {[
                     {
                       icon: Shield,
-                      title: "Security-first architecture",
-                      desc: "Guardrails, governance, and isolation built-in.",
+                      title: "AI Chatbots & Assistants",
+                      desc: "AI Assistants For Business Productivity",
                     },
                     {
                       icon: Search,
-                      title: "Grounded intelligence",
-                      desc: "Retrieval + evaluation to reduce hallucinations.",
+                      title: "AI Security & Risk Monitoring",
+                      desc: "AI Monitoring For Security Governance",
                     },
                     {
                       icon: Workflow,
-                      title: "Operational integration",
-                      desc: "Connect models to tools, APIs, and workflows.",
+                      title: "Workflow Automation",
+                      desc: "AI Integration For Workflow Automation",
                     },
                     {
                       icon: Activity,
-                      title: "Monitoring & improvement",
-                      desc: "Observe quality, cost, safety, and reliability.",
+                      title: "Private AI",
+                      desc: "Private AI With Full Control",
                     },
                   ].map((x, i) => (
                     <div
@@ -1387,7 +1387,7 @@ export default function GoldenZVisionWebsite() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070812]/80 to-transparent" />
 
-                {/* ✅ optional tag area (kept minimal, aligned) */}
+                {/* ✅ Mandatory tag area (kept minimal, aligned) */}
                 <div className="absolute left-3 top-3 flex flex-wrap gap-2">
                   <Badge className="border border-white/10 bg-white/10 text-white text-xs">
                     AI Billing
@@ -1411,7 +1411,7 @@ export default function GoldenZVisionWebsite() {
                   recognition to generate fast, accurate, and paperless digital bills.
                 </p>
 
-                {/* ✅ aligned meta row (optional, clean) */}
+                {/* ✅ aligned meta row (Mandatory, clean) */}
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <Badge className="rounded-full border border-white/10 bg-white/5 text-white/75 text-xs">
                     Voice
@@ -1461,7 +1461,7 @@ export default function GoldenZVisionWebsite() {
                   hide and survive while every movement can reveal their location.
                 </p>
 
-                {/* ✅ aligned meta row (optional, clean) */}
+                {/* ✅ aligned meta row (Mandatory, clean) */}
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   <Badge className="rounded-full border border-white/10 bg-white/5 text-white/75 text-xs">
                     Stealth
