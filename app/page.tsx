@@ -175,8 +175,8 @@ function SectionHeading({
     tone === "warm"
       ? "bg-gradient-to-r from-orange-200 via-amber-200 to-rose-200 bg-clip-text text-transparent"
       : tone === "ink"
-      ? "text-white"
-      : "text-white";
+        ? "text-white"
+        : "text-white";
 
   return (
     <div className="mx-auto max-w-2xl text-center">
@@ -241,8 +241,8 @@ function SectionShell({
     variant === "glass"
       ? "relative overflow-hidden"
       : variant === "soft"
-      ? "relative"
-      : "relative";
+        ? "relative"
+        : "relative";
 
   const overlay =
     variant === "glass" ? (
@@ -488,8 +488,8 @@ function ClientRequestDialogContent({
     requestType === "consultation"
       ? "AI (Private AI)"
       : requestType === "custom_service"
-      ? "Custom Applications"
-      : "Our Product and Service";
+        ? "Custom Applications"
+        : "Our Product and Service";
 
   const selectionBadge = (
     <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
@@ -625,8 +625,8 @@ function ClientRequestDialogContent({
                   {x.id === "consultation"
                     ? "Get your own Private Ai"
                     : x.id === "custom_service"
-                    ? "Web/App, Software, Simualtion, 3D Design."
-                    : "Get our Solutions"}
+                      ? "Web/App, Software, Simualtion, 3D Design."
+                      : "Get our Solutions"}
                 </div>
               </button>
             );
@@ -664,7 +664,7 @@ function ClientRequestDialogContent({
                       "bg-gradient-to-r from-amber-500/16 via-rose-500/10 to-transparent"
                     )}
                   />
-                  
+
 
                   <div className="relative text-sm font-semibold text-white">
                     {x.label}
@@ -1096,7 +1096,7 @@ export default function GoldenZVisionWebsite() {
               >
                 <Button
                   size="lg"
-                  onClick={() => setOpen(true)}
+                  onClick={() => window.location.href = "/ai-assistant"}
                   className={cn(
                     "rounded-2xl text-white shadow-lg",
                     "bg-gradient-to-r",
@@ -1159,7 +1159,7 @@ export default function GoldenZVisionWebsite() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white">
-                        AI Solutions We Deliver 
+                        AI Solutions We Deliver
                       </div>
                       <div className="text-xs text-white/60">
                         Secure, Intelligent, Scalable AI Solutions
@@ -1367,7 +1367,7 @@ export default function GoldenZVisionWebsite() {
         </SectionShell>
 
         {/* Our Products Section */}
-                <SectionShell id="our-products" variant="glass">
+        <SectionShell id="our-products" variant="glass">
           <SectionHeading
             eyebrow="Our Products"
             title="AI products designed for real-world operations"
